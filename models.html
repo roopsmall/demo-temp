@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src='jquery.min.js' type='text/javascript'></script>
+<script src="plotly-latest.min.js"></script>
+</head>
+<body>
+
+
+<div class='row'>
+<div class='col-xs-0 col-md-3'>
+</div>
+<div style='float:left'>
+<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
+</div>
+<div class='col-xs-6 col-md-3'>
+<table class="table table-condensed">
+<tr>
+<td>github ico</td><td>github link</td>
+</tr>
+<tr>
+<td>wiki ico</td><td>wiki link</td>
+</tr>
+<tr>
+<td><div id="tester" style="width:400px;height:250px;"></div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-0 col-md-3'>
+</div>
+<div style='float:left'>
+<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
+</div>
+<div class='col-xs-6 col-md-3'>
+<table class="table table-condensed">
+<tr>
+<td>github ico</td><td>github link</td>
+</tr>
+<tr>
+<td>wiki ico</td><td>wiki link</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-0 col-md-3'>
+</div>
+<div style='float:left'>
+<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
+</div>
+<div class='col-xs-6 col-md-3'>
+<table class="table table-condensed">
+<tr>
+<td>github ico</td><td>github link</td>
+</tr>
+<tr>
+<td>wiki ico</td><td>wiki link</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+<script src='canvas.js' language='JavaScript' type='text/javascript'></script>
+<script>
+    TESTER = document.getElementById('tester');
+    var layout = {
+    margin: {
+        l: 50,
+        r: 50,
+        b: 50,
+        t: 50,
+        pad: 4
+        }
+    };
+    
+    var data = [
+    {
+    x: ['giraffes', 'orangutans', 'monkeys'],
+    y: [20, 14, 23],
+    type: 'bar'
+  }
+];
+
+Plotly.newPlot(TESTER, data, layout, {editable: false, staticPlot: true, displayModeBar: false});
+</script>
+</body>
+</html>
+
