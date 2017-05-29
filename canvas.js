@@ -1,6 +1,5 @@
-//var canvas = document.getElementsByClassName('canvas-1')[0];
-//var canvas = document.getElementById('canvas-1');
-//var context = canvas.getContext("2d");
+//var w = $('.canvas-1').width();
+//$('.canvas-1').css({'height': '250px'});
 
 $('.canvas-1').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -47,7 +46,7 @@ function redraw(){
   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
   context.strokeStyle = "#df4b26";
   context.lineJoin = "round";
-  context.lineWidth = 5;
+  context.lineWidth = 12;
 
   for(var i=0; i < clickX.length; i++) {
     context.beginPath();

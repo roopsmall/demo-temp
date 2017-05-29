@@ -11,19 +11,51 @@
 <div class='row'>
 <div class='col-xs-0 col-md-3'>
 </div>
-<div style='float:left'>
-<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
-</div>
+<canvas class="canvas-1 col-xs-6 col-md-2" style='border:1px solid black;'></canvas>
 <div class='col-xs-6 col-md-3'>
 <table class="table table-condensed">
 <tr>
-<td>github ico</td><td>github link</td>
+<td colspan=2>github ico github link</td>
+<td colspan=2>&nbsp;</td>
 </tr>
 <tr>
-<td>wiki ico</td><td>wiki link</td>
+<td colspan=2>wiki ico wiki link</td>
+<td colspan=2>&nbsp;</td>
 </tr>
 <tr>
-<td><div id="tester" style="width:400px;height:250px;"></div></td>
+<td colspan=2>
+
+<div class="progress" style="margin-bottom:2px;">
+<div class="progress-bar progress-bar-success" role="progressbar" style="width:30%;">
+70%
+</div>
+</div>
+
+<div class="progress" style="margin-bottom:2px;">
+<div class="progress-bar progress-bar-success" role="progressbar" style="width:30%;">
+70%
+</div>
+</div>
+
+<div class="progress" style="margin-bottom:2px;">
+<div class="progress-bar progress-bar-success" role="progressbar" style="width:30%;">
+70%
+</div>
+</div>
+
+<div class="progress" style="margin-bottom:2px;">
+<div class="progress-bar progress-bar-warning" role="progressbar" style="width:30%;">
+70%
+</div>
+</div
+
+</div>
+</td>
+<td rowspan=2>
+<p>
+SVM. This is a description of the SVM method and its distinguishing features, as well as interesting things about SVM's and where they are used.
+</p>
+</td>
 </tr>
 </table>
 </div>
@@ -32,9 +64,7 @@
 <div class='row'>
 <div class='col-xs-0 col-md-3'>
 </div>
-<div style='float:left'>
-<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
-</div>
+<canvas class="canvas-1 col-xs-6 col-md-2" style='border:1px solid black;'></canvas>
 <div class='col-xs-6 col-md-3'>
 <table class="table table-condensed">
 <tr>
@@ -50,9 +80,7 @@
 <div class='row'>
 <div class='col-xs-0 col-md-3'>
 </div>
-<div style='float:left'>
-<canvas class="canvas-1" width="250" height="250" style='border:1px solid black;'></canvas>
-</div>
+<canvas class="canvas-1 col-xs-6 col-md-2" style='border:1px solid black;'></canvas>
 <div class='col-xs-6 col-md-3'>
 <table class="table table-condensed">
 <tr>
@@ -67,28 +95,6 @@
 
 
 <script src='canvas.js' language='JavaScript' type='text/javascript'></script>
-<script>
-    TESTER = document.getElementById('tester');
-    var layout = {
-    margin: {
-        l: 50,
-        r: 50,
-        b: 50,
-        t: 50,
-        pad: 4
-        }
-    };
-    
-    var data = [
-    {
-    x: ['giraffes', 'orangutans', 'monkeys'],
-    y: [20, 14, 23],
-    type: 'bar'
-  }
-];
-
-Plotly.newPlot(TESTER, data, layout, {editable: false, staticPlot: true, displayModeBar: false});
-</script>
 </body>
 </html>
 
