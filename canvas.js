@@ -29,6 +29,8 @@ $('.canvas-1').mousemove(function(e){
 });
 
 $('.canvas-1').mouseup(function(e){
+  grayscale = canvas_grayscale();
+  console.log(grayscale);
   paint = false;
 });
 
@@ -48,7 +50,7 @@ function redraw(){
  
  var canvas = document.getElementsByClassName('canvas-1'); 
  var arrayLength = canvas.length;
- for (var j = 0; j < arrayLength; j++) {
+ for (var j=0; j < arrayLength; j++) {
   var context = canvas[j].getContext("2d");
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   context.strokeStyle = "#df4b26";
@@ -65,5 +67,24 @@ function redraw(){
   context.closePath();
   context.stroke();
  }
+ canvas_grayscale();
 }
 
+function canvas_grayscale() {
+ var canvas = document.getElementsByClassName('canvas-1');
+ var grayscale = document.createElement('canvas');
+ var context = grayscale.getContext("2d");
+ context.drawImage(canvas[0], 0, 0, 28, 28);
+
+ var meta = context.getImageData(0,0,28,28);
+ var meta_data = new Array();
+
+ for (var j=0; j<meta.data.length; j+=4) {
+  var r = meta.data[j];
+  var g = meta.data[j+1];
+  var b = meta.data[j+2];
+  meta_data.push([r, g, b]);
+ }
+
+ return meta_data;
+}
